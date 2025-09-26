@@ -1,103 +1,152 @@
 import Image from "next/image";
+import { ArrowRight } from "lucide-react";
+import LogoMarquee from "./components/LogoMarquee";
+import ServiceCard from "./components/Servicecard";
+import ProjectCard from "./components/Projectcard";
+import GithubShowcase from "./components/GithubShowcase";
+
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      {/* HERO */}
+      <section className="section pt-24 pb-20">
+        <div className="max-w-3xl">
+          <h1 className="headline">
+            AI, Cloud & Security—built for <span className="text-brand-500">mid‑market</span> teams
+          </h1>
+          <p className="subhead">
+            We design and ship production‑grade AI systems, modernize cloud, and harden security—fast.
+            Strategy → MVP → scale.
+          </p>
+          <div className="mt-8 flex gap-4">
+            <a href="#contact" className="btn">
+              Get a free consult <ArrowRight className="ml-2 h-4 w-4" />
+            </a>
+            <a href="#work" className="btn-outline">See our work</a>
+          </div>
+          {/* proof stats */}
+          <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-6">
+            {[
+              ["< 12 weeks", "Avg. time to MVP"],
+              ["30–60%", "Ops cost savings (cloud/automation)"],
+              ["HIPAA/PCI", "Compliance-ready"],
+              ["24/7", "Support options"],
+            ].map(([k, v]) => (
+              <div key={k} className="glass p-4 rounded-xl">
+                <div className="text-xl font-semibold">{k}</div>
+                <div className="text-white/60 text-sm mt-1">{v}</div>
+              </div>
+            ))}
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* CLIENTS MARQUEE */}
+      <section id="clients" className="section py-10">
+        <h2 className="text-2xl md:text-3xl font-semibold">Trusted by forward‑thinking teams</h2>
+        <LogoMarquee className="mt-8" />
+      </section>
+
+      {/* SERVICES */}
+      <section id="services" className="section py-20">
+        <h2 className="text-2xl md:text-3xl font-semibold">What we do</h2>
+        <p className="text-white/70 mt-2 max-w-3xl">
+          From discovery to scale: applied AI, data platforms, cloud modernization, and secure-by‑design engineering.
+        </p>
+        <div className="mt-10 grid md:grid-cols-3 gap-6">
+          <ServiceCard title="Applied AI & ML"
+            bullets={["Gen‑AI assistants & RAG","Model evaluation & guardrails","Custom LLM fine‑tuning"]}/>
+          <ServiceCard title="Cloud (AWS/Azure/GCP)"
+            bullets={["Migrations & cost‑opt","Serverless & microservices","IaC & CI/CD"]}/>
+          <ServiceCard title="Data Engineering"
+            bullets={["Pipelines & warehouses","MDS / Lakehouse","Dashboards & observability"]}/>
+          <ServiceCard title="Security & Compliance"
+            bullets={["M365/Azure/AWS hardening","HIPAA/PCI/CMMC readiness","IR playbooks & training"]}/>
+          <ServiceCard title="Automation"
+            bullets={["Workflow/RPA","Integrations & APIs","SRE & platform ops"]}/>
+          <ServiceCard title="Web & Mobile"
+            bullets={["Next.js/React","Flutter/iOS/Android","Design systems"]}/>
+        </div>
+      </section>
+
+   {/* OUR WORK */}
+<section id="work" className="section py-16">
+  <div className="flex items-end justify-between">
+    <h2 className="text-2xl md:text-3xl font-semibold">Our work</h2>
+    <a href="/works" className="text-brand-400 hover:text-brand-300">View all →</a>
+  </div>
+
+  {/* denser grid: 1 → 2 → 3 columns */}
+  <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  <ProjectCard
+    title="Metro Classic"
+    desc="Ticketing + live analytics with automated ops."
+    image="/work/metro-classic.png"
+  />
+  <ProjectCard
+    title="Basketballisfun"
+    desc="Lucy Olsen (WNBA) personal merch store"
+    image="/work/basketballisfun.png"
+    href="https://www.basketballisfun.co/"
+    external
+  />
+  <ProjectCard
+    title="Cre8tors"
+    desc="NIL Marketplace + AI compliance assistant."
+    image="/work/cre8tors_icon1.png"
+  />
+  <ProjectCard
+    title="FDNS Construction"
+    desc="Field ops app, device hardening, cloud cost-opt."
+    image="/work/fdns_logo.jpeg"
+  />
+   <ProjectCard
+    title="Tix"
+    desc="Event ticketing platform with dynamic Checkout."
+    image="/work/cre8tors_tix.svg"
+  />
+</div>
+
+
+</section>
+{/* WHY ZIONXAI */}
+<section id="why" className="section py-20">
+  <div className="max-w-3xl mx-auto text-center">
+    <h2 className="text-3xl md:text-4xl font-semibold">Why ZionXAI</h2>
+    <p className="text-white/70 mt-3">
+      We don’t just ship decks—we ship code. Explore active projects, experiments, and
+      production contributions. Hands-on engineering across AI, cloud, data, and security.
+    </p>
+    <div className="mt-6 flex items-center justify-center gap-4">
+      <a
+        href="https://github.com/colleybrb"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="btn"
+      >
+        View our GitHub
+      </a>
+      <a href="#work" className="btn-outline">See case studies</a>
     </div>
+  </div>
+
+  {/* live GitHub repos (or curated fallback) */}
+  <GithubShowcase />
+</section>
+
+
+
+      {/* CTA */}
+      <section id="contact" className="section py-24">
+        <div className="glass rounded-2xl p-10 md:p-14 flex flex-col md:flex-row md:items-center md:justify-between">
+          <div>
+            <h3 className="text-2xl md:text-3xl font-semibold">Ready to build?</h3>
+            <p className="text-white/70 mt-2 max-w-xl">Tell us your goals—get a quick technical plan and timeline.</p>
+          </div>
+          <a href="mailto:hello@zionxai.com" className="btn mt-6 md:mt-0">Email Dan@zionxai.com</a>
+        </div>
+      </section>
+    </>
   );
 }

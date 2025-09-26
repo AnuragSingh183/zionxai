@@ -1,26 +1,44 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* ...your utilities (glass, btn, section, etc.) */
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+
+@import "tailwindcss";              /* v4 import */
+
+@theme {
+  --color-brand-50:  #e6f3ff;
+  --color-brand-100: #cfe9ff;
+  --color-brand-200: #a9d7ff;
+  --color-brand-300: #7ac2ff;
+  --color-brand-400: #45a6ff;
+  --color-brand-500: #1e8cff;
+  --color-brand-600: #1172e6;
+  --color-brand-700: #0e5bc0;
+  --color-brand-800: #0f4b99;
+  --color-brand-900: #123f7d;
+
+  --shadow-glow: 0 0 40px rgba(30,140,255,0.35);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* your utilities */
+:root { color-scheme: dark; }
+html, body { @apply bg-neutral-950 text-white antialiased; }
+.glass { @apply bg-white/5 backdrop-blur-md border border-white/10; }
+.btn { @apply inline-flex items-center justify-center rounded-lg px-5 py-3 font-medium
+  bg-brand-500 hover:bg-brand-400 text-white transition; box-shadow: var(--shadow-glow); }
+.btn-outline { @apply inline-flex items-center rounded-lg px-5 py-3 border border-white/20
+  text-white hover:bg-white/10 transition; }
+.section { @apply max-w-7xl mx-auto px-6 md:px-10; }
+.headline { @apply text-4xl md:text-6xl font-semibold tracking-tight; }
+.subhead  { @apply text-lg md:text-xl text-white/70 mt-4; }
+
+@keyframes marquee { 0% {transform:translateX(0)} 100% {transform:translateX(-50%)} }
+.bg-grid-radial {
+  background-image:
+    radial-gradient(600px 300px at 20% 10%, rgba(30,140,255,0.25), transparent 60%),
+    radial-gradient(800px 400px at 80% 10%, rgba(30,140,255,0.15), transparent 60%);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
