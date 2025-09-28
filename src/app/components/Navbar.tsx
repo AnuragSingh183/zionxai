@@ -11,7 +11,7 @@ export default function Navbar() {
   }, []);
   return (
     <header className={`sticky top-0 z-50 transition ${scrolled ? "backdrop-blur-md bg-black/40 border-b border-white/10" : "bg-transparent"}`}>
-      <div className="section py-4 flex items-center justify-between">
+      <div className="section-left py-4 flex items-center justify-between">
         <Link href="/" className="text-white font-semibold tracking-wide text-xl"><span className="text-brand-400">Zion</span>XAI</Link>
         <nav className="hidden md:flex gap-7 text-white/80">
           <Link href="#services" className="hover:text-white">Services</Link>
@@ -19,8 +19,13 @@ export default function Navbar() {
           <Link href="#work" className="hover:text-white">Work</Link>
           <Link href="#contact" className="hover:text-white">Contact</Link>
         </nav>
-        <Link href="#contact" className="btn hidden md:inline-flex">Talk to an expert</Link>
+        {/* <Link href="#contact" className="btn hidden md:inline-flex">Talk to an expert</Link> */}
+        {/* // in Navbar.tsx */}
+<a href="/contact" className="btn hidden md:inline-flex">Talk to an expert</a>
+
       </div>
     </header>
+    
   );
+  
 }

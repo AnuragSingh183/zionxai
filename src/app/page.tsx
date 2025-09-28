@@ -10,15 +10,17 @@ export default function Home() {
   return (
     <>
       {/* HERO */}
-      <section className="section pt-24 pb-20">
+      
+<section className="section-left pt-24 pb-20">
         <div className="max-w-3xl">
-          <h1 className="headline">
-            AI, Cloud & Security—built for <span className="text-brand-500">mid‑market</span> teams
+        <h1 className="headline font-display tracking-tight">
+            AI, Cloud & Security built for <span className="text-brand-500">mid‑market</span> teams
           </h1>
           <p className="subhead">
             We design and ship production‑grade AI systems, modernize cloud, and harden security—fast.
             Strategy → MVP → scale.
           </p>
+          
           <div className="mt-8 flex gap-4">
             <a href="#contact" className="btn">
               Get a free consult <ArrowRight className="ml-2 h-4 w-4" />
@@ -43,13 +45,13 @@ export default function Home() {
       </section>
 
       {/* CLIENTS MARQUEE */}
-      <section id="clients" className="section py-10">
+     <section id="clients" className="section-left py-20">
         <h2 className="text-2xl md:text-3xl font-semibold">Trusted by forward‑thinking teams</h2>
         <LogoMarquee className="mt-8" />
       </section>
 
       {/* SERVICES */}
-      <section id="services" className="section py-20">
+   <section id="services" className="section-left py-20">
         <h2 className="text-2xl md:text-3xl font-semibold">What we do</h2>
         <p className="text-white/70 mt-2 max-w-3xl">
           From discovery to scale: applied AI, data platforms, cloud modernization, and secure-by‑design engineering.
@@ -71,7 +73,7 @@ export default function Home() {
       </section>
 
    {/* OUR WORK */}
-<section id="work" className="section py-16">
+<section id="work" className="section-left py-6">
   <div className="flex items-end justify-between">
     <h2 className="text-2xl md:text-3xl font-semibold">Our work</h2>
     <a href="/works" className="text-brand-400 hover:text-brand-300">View all →</a>
