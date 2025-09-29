@@ -21,7 +21,7 @@ export default function Navbar() {
         </nav>
         {/* <Link href="#contact" className="btn hidden md:inline-flex">Talk to an expert</Link> */}
         {/* // in Navbar.tsx */}
-<a href="/contact" className="btn hidden md:inline-flex">Talk to an expert</a>
+{/* <a href="/contact" className="btn hidden md:inline-flex">Talk to an expert</a> */}
 
       </div>
     </header>

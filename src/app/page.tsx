@@ -22,9 +22,10 @@ export default function Home() {
           </p>
           
           <div className="mt-8 flex gap-4">
-            <a href="#contact" className="btn">
+            <a href="/contact" className="btn">
               Get a free consult <ArrowRight className="ml-2 h-4 w-4" />
             </a>
+          
             <a href="#work" className="btn-outline">See our work</a>
           </div>
           {/* proof stats */}
@@ -146,7 +147,7 @@ export default function Home() {
             <h3 className="text-2xl md:text-3xl font-semibold">Ready to build?</h3>
             <p className="text-white/70 mt-2 max-w-xl">Tell us your goals—get a quick technical plan and timeline.</p>
           </div>
-          <a href="mailto:hello@zionxai.com" className="btn mt-6 md:mt-0">Email Dan@zionxai.com</a>
+          <a href="/contact" className="btn mt-6 md:mt-0">Talk to an Expert</a>
         </div>
       </section>
     </>
