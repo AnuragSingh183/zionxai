@@ -22,8 +22,8 @@ export default function Home() {
           </p>
           
           <div className="mt-8 flex gap-4">
-            <a href="/contact" className="btn">
-              Get a free consult <ArrowRight className="ml-2 h-4 w-4" />
+            <a href="https://outlook.office.com/book/ZionSystemsLLC@collspark.ai/%27>Schedule" className="btn">
+              Book a free consult <ArrowRight className="ml-2 h-4 w-4" />
             </a>
           
             <a href="#work" className="btn-outline">See our work</a>
@@ -103,6 +103,7 @@ export default function Home() {
     title="FDNS Construction"
     desc="Field ops app, device hardening, cloud cost-opt."
     image="/work/fdns_logo.jpeg"
+    href="https://fdnsconstruction.com/"
   />
    <ProjectCard
     title="Tix"
