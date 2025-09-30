@@ -20,7 +20,7 @@ export default function LogoMarquee({
     { src: "/logos/basketballisfun.png", alt: "BasketballisFUN" },
     { src: "/logos/cre8tors_tix.svg", alt: "Tix" },
     { src: "/logos/MetroClassic.png", alt: "Metro Classic" },
-    { src: "/logos/cre8tors_icon1.png", alt: "Cre8tors" },
+    { src: "/logos/cre8tors_icon.png", alt: "Cre8tors" },
   ];
   const items = logos ?? defaults;
 

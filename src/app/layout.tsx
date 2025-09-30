@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
+    metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -31,3 +32,5 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   );
 }
+
+
