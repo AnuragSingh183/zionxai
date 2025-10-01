@@ -97,7 +97,7 @@ export default function Home() {
   <ProjectCard
     title="Cre8tors"
     desc="NIL Marketplace + AI compliance assistant."
-    image="/work/cre8tors_icon.png"
+    image="/work/Cre8tors_icon.png"
   />
   <ProjectCard
     title="FDNS Construction"
