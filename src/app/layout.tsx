@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import AnnouncementBar from "./components/AnnouncementBar";
 import { display, mono,body } from "./fonts";
 
 
@@ -25,6 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" suppressHydrationWarning>
       {/* add the font variables to the body */}
       <body className={`${display.variable} ${body.variable} ${mono.variable} bg-grid-radial font-body`}>
+        <AnnouncementBar />
         <Navbar />
         <main>{children}</main>
         <Footer />
