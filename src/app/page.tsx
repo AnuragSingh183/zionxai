@@ -98,6 +98,8 @@ export default function Home() {
     title="Cre8tors"
     desc="NIL Marketplace + AI compliance assistant."
     image="/work/Cre8tors_icon.png"
+    href="https://beta.cre8tors.ai/"
+    external
   />
   <ProjectCard
     title="FDNS Construction"
